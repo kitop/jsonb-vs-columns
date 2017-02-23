@@ -1,0 +1,37 @@
+Warming up --------------------------------------
+     columns visible    14.000  i/100ms
+       jsonb visible    11.000  i/100ms
+Calculating -------------------------------------
+     columns visible    149.779  (± 4.0%) i/s -    756.000  in   5.054991s
+       jsonb visible    117.543  (± 2.6%) i/s -    594.000  in   5.056913s
+
+Comparison:
+     columns visible:      149.8 i/s
+       jsonb visible:      117.5 i/s - 1.27x  slower
+
+Warming up --------------------------------------
+ columns in carousel    11.000  i/100ms
+   jsonb in carousel     4.000  i/100ms
+Calculating -------------------------------------
+ columns in carousel    115.276  (± 2.6%) i/s -    583.000  in   5.061594s
+   jsonb in carousel     44.696  (± 4.5%) i/s -    224.000  in   5.028104s
+
+Comparison:
+ columns in carousel:      115.3 i/s
+   jsonb in carousel:       44.7 i/s - 2.58x  slower
+
+Warming up --------------------------------------
+column visible and featured
+                        25.000  i/100ms
+jsonb visible and featured
+                        17.000  i/100ms
+Calculating -------------------------------------
+column visible and featured
+                        259.007  (± 4.6%) i/s -      1.300k in   5.030515s
+jsonb visible and featured
+                        175.025  (± 2.3%) i/s -    884.000  in   5.053593s
+
+Comparison:
+column visible and featured:      259.0 i/s
+jsonb visible and featured:      175.0 i/s - 1.48x  slower
+
