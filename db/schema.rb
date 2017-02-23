@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 4) do
+ActiveRecord::Schema.define(version: 5) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 4) do
 
   create_table "publishing_jsonbs", force: :cascade do |t|
     t.jsonb "options", null: false
+    t.index "options jsonb_path_ops", name: "index_publishing_jsonbs_on_options_jsonb_path_ops", using: :gin
     t.index ["options"], name: "index_publishing_jsonbs_on_options", using: :gin
   end
 

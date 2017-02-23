@@ -9,10 +9,10 @@ class PublishingColumn < ActiveRecord::Base
 end
 
 class PublishingJsonb < ActiveRecord::Base
-  scope :visible, -> { where("(options->>?)::boolean = ?", :visible, true) }
-  scope :featured, -> { where("(options->>?)::boolean = ?", :featured, true) }
+  scope :visible, -> { where("options @> ?", '{"visible": true}') }
+  scope :featured, -> { where("options @> ?", '{"featured": true}') }
   scope :in_carousel, -> {
-    where("(options->>?)::boolean = ?", :in_carousel, true)
+    where("options @> ?", '{"in_carousel": true}')
     .order("options->'carousel_position' asc")
   }
 end
