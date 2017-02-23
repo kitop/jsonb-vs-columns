@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2) do
+ActiveRecord::Schema.define(version: 4) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,10 +20,13 @@ ActiveRecord::Schema.define(version: 2) do
     t.boolean "featured",          null: false
     t.boolean "in_carousel",       null: false
     t.integer "carousel_position"
+    t.index ["in_carousel", "carousel_position"], name: "index_publishing_columns_on_in_carousel_and_carousel_position", using: :btree
+    t.index ["visible", "featured"], name: "index_publishing_columns_on_visible_and_featured", using: :btree
   end
 
   create_table "publishing_jsonbs", force: :cascade do |t|
     t.jsonb "options", null: false
+    t.index ["options"], name: "index_publishing_jsonbs_on_options", using: :gin
   end
 
 end
