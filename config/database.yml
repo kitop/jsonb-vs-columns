@@ -1,0 +1,5 @@
+development:
+  adapter: postgresql
+  database: jsonb_vs_columns
+  pool: 5
+  timeout: 5000
