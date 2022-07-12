@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "activerecord", "5.0.1"
+gem "activerecord", "5.2.8.1"
 gem "pg", "~> 0.19.0"
 gem "benchmark-ips", require: "benchmark/ips"
 
