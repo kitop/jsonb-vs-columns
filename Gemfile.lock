@@ -1,33 +1,33 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (5.0.1)
-      activesupport (= 5.0.1)
-    activerecord (5.0.1)
-      activemodel (= 5.0.1)
-      activesupport (= 5.0.1)
-      arel (~> 7.0)
-    activesupport (5.0.1)
+    activemodel (6.1.7.1)
+      activesupport (= 6.1.7.1)
+    activerecord (6.1.7.1)
+      activemodel (= 6.1.7.1)
+      activesupport (= 6.1.7.1)
+    activesupport (6.1.7.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (~> 0.7)
-      minitest (~> 5.1)
-      tzinfo (~> 1.1)
-    arel (7.1.4)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
     benchmark-ips (2.7.2)
-    concurrent-ruby (1.0.4)
-    i18n (0.8.1)
-    minitest (5.10.1)
+    concurrent-ruby (1.1.10)
+    i18n (1.12.0)
+      concurrent-ruby (~> 1.0)
+    minitest (5.17.0)
     pg (0.19.0)
     rake (12.3.3)
-    thread_safe (0.3.6)
-    tzinfo (1.2.2)
-      thread_safe (~> 0.1)
+    tzinfo (2.0.5)
+      concurrent-ruby (~> 1.0)
+    zeitwerk (2.6.6)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord (= 5.0.1)
+  activerecord (= 6.1.7.1)
   benchmark-ips
   pg (~> 0.19.0)
   rake
